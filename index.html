@@ -1,0 +1,431 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>fred-sympoz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h2 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .navbar.scrolled {
+        /* Style quand la navbar a défilé */
+        background-color: white;
+        /* Couleur quand scrollé */
+        animation: navbarAnimation 0.5s ease-out forwards;
+        /* Ombre optionnelle */
+    }
+
+    @keyframes navbarAnimation {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<body class="bg-[#fffffc]">
+
+    <section class="w-full h-screen relative"
+        style="background-image: url(./assects/484732103_1220383923425518_3938317128079128_n.jpg); overflow: hidden; object-fit: cover;">
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+        <nav class="navbar bg-transparent w-full h-16 flex items-center justify-center fixed top-0 z-10">
+            <div class=" w-11/12 h-10 flex justify-between items-center gap-5">
+                <div class="w-auto  h-full flex justify-between items-center">
+                    <a href="" class="text-[#145bff] text-2xl">fred-sympoz</a>
+                </div>
+                <div class="hidden xl:flex w-auto h-full flex justify-center items-center">
+                    <ul class="write flex items-center justify-between text-white text-lg gap-7 w-full">
+                        <li><a href="">Acceuil</a></li>
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Realisations</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="hidden xl:flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <a href="" class="contact font-semibold text-white">Contact</a>
+                    <a href="#"
+                        class="font-semibold bg-[#145bff] px-6 py-2 rounded-full text-white flex items-center gap-2 hover:bg-[#0e4acc] transition">
+                        <i class="fas fa-shopping-cart"></i> Notre Boutique
+                    </a>
+                </div>
+                <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <button class="py-2 p-3 rounded-xl border-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="w-full h-full py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative  z-1">
+            <div class="mx-auto max-w-7xl lg:mt-14 mt-16">
+                <div class="flex flex-col items-center text-center">
+                    <!-- Titre avec soulignement SVG -->
+                    <div class="mb-8 md:mb-5">
+                        <h2
+                            class="text-4xl lg:max-w-5xl font-bold leading-tight sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
+                            <span class="relative inline-block text-blue-600">
+                                <svg aria-hidden="true" viewBox="0 0 418 42"
+                                    class="absolute -bottom-1 left-0 h-[0.4em] w-full fill-blue-300/70"
+                                    preserveAspectRatio="none">
+                                    <path
+                                        d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z">
+                                    </path>
+                                </svg>
+                                <span class="relative">Créez, imprimez, progressez…</span>
+                            </span>
+                            <span class="block sm:inline text-white">un résultat qui impressionne.</span>
+                        </h2>
+                    </div>
+
+                    <!-- Sous-titre -->
+                    <div class="mb-10 max-w-2xl">
+                        <p class="text-lg text-white md:text-xl">
+                            Menuiserie, impressions professionnelles et coaching mindset réunis sur une seule
+                            plateforme.
+                        </p>
+                    </div>
+
+                    <!-- Boutons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                            class="inline-flex items-center rounded-full gap-2 px-6 py-3 text-sm font-semibold text-white ring-1 ring-gray-200 hover:bg-blue-600 hover:ring-0 focus-visible:outline-blue-600 transition-all duration-200">
+                            <i class="fas fa-shopping-cart"></i>Demander un devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="py-12 md:py-20 lg:py-20 flex justify-center align-center">
+        <div class="xl:w-10/12 w-full px-4 xl:flex justify-center gap-24 space-y-10 md:space-y-0">
+            <!-- Left Column -->
+            <div class="lg:w-1/3 xl:w-1/3">
+                <div class="flex items-center gap-8 py-2" data-aos="fade-right" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <span
+                        class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 font-medium text-lg text-white">01</span>
+                    <hr class="border-line w-20 border-t border-[#e6e6e6]">
+                    <span class="rounded-full px-5 py-1 bg-black text-lg text-white">Nos Résultats</span>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:w-2/3 xl:w-7/12">
+                <div class="flex flex-col gap-9">
+                    <!-- Title Section -->
+                    <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-3xl font-bold md:text-5xl">L'excellence artisanale, l'innovation digitale</h2>
+                        <p class="text-lg text-[#9fa5a6]">Chez Fred Sympoz, nous fusionnons <span
+                                class="text-blue-600">savoir-faire manuel</span>, <span class="text-blue-600">précision
+                                technique</span> et <span class="text-blue-600">développement personnel</span> pour des
+                            résultats qui transcendent les attentes.</p>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <!-- Stat 1 - Menuiserie -->
+                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex flex-col gap-6">
+                                <h2 class="text-4xl font-bold text-gray-900">
+                                    <span class="count" data-target="250">250</span>+
+                                </h2>
+                                <p class="text-[#9fa5a6]">Projets de menuiserie réalisés sur-mesure</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat 2 - Impression -->
+                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex flex-col gap-6">
+                                <h2 class="text-4xl font-bold text-gray-900">
+                                    <span class="count" data-target="5000">5000</span>+
+                                </h2>
+                                <p class="text-[#9fa5a6]">Produits imprimés livrés avec excellence</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat 3 - Coaching -->
+                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex flex-col gap-6">
+                                <h2 class="text-4xl font-bold text-gray-900">
+                                    <span class="count" data-target="100">100</span>+
+                                </h2>
+                                <p class="text-[#9fa5a6]">Entrepreneurs accompagnés vers le succès</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <a href="about-us.html" class="group inline-flex items-center gap-2 bg-black" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <span class="font-medium">Who we are</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 lg:py-10 flex justify-center align-center relative overflow-x-hidden">
+        <div class="xl:w-10/12 w-full h-auto flex justify-center align-center flex-col gap-16 lg:gap-20">
+            <div class="w-full px-4 xl:flex justify-center gap-24 space-y-10 md:space-y-0">
+                <!-- Left Column -->
+                <div class="lg:w-1/3 xl:w-1/3">
+                    <div class="flex items-center gap-8 py-2" data-aos="fade-right" data-aos-delay="100"
+                        data-aos-duration="1000">
+                        <span
+                            class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 font-medium text-lg text-white">02</span>
+                        <hr class="border-line w-20 border-t border-[#e6e6e6]">
+                        <span class="rounded-full px-5 py-1 bg-black text-lg text-white">Portfolio</span>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="lg:w-2/3 xl:w-7/12">
+                    <div class="flex flex-col gap-9">
+                        <!-- Title Section -->
+                        <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="text-3xl font-bold md:text-5xl">Nos Réalisations d'Exception</h2>
+                            <p class="text-lg text-[#9fa5a6]">Découvrez notre savoir-faire à travers des créations uniques où <span class="text-blue-600">l'artisanat</span>, <span class="text-blue-600">l'impression premium</span> et <span class="text-blue-600">l'expertise mindset</span> se rencontrent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-screen ml-[calc(-50vw+50%)] px-7">
+                <section class="splide" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div
+                                    class="h-full bg-red- w-screen pl-[calc(50vw-50%)] pr-[calc(50vw-50%)] -ml-[calc(50vw-50%)]">
+                                    <!-- Div Image -->
+                                    <div class="h-60 w-full relative">
+                                        <img src="./assects/484732103_1220383923425518_3938317128079128_n.jpg" alt=""
+                                            class="absolute object-cover w-full h-full">
+                                    </div>
+                                    <!-- Div Texte -->
+                                    <div class="h-auto">
+                                        <div class="xl:w-10/12 w-11/12 pt-3">
+                                            <h3 class="text-xl md:text-2xl font-bold">Titre Projet 1</h3>
+                                            <p class="text-gray-600 dark:text-gray-300 mt-2">Description du projet avec
+                                                détails importants.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div
+                                    class="h-full w-screen pl-[calc(50vw-50%)] pr-[calc(50vw-50%)] -ml-[calc(50vw-50%)]">
+                                    <!-- Div Image -->
+                                    <div class="h-60 w-full relative">
+                                        <img src="./assects/484732103_1220383923425518_3938317128079128_n.jpg" alt=""
+                                            class="absolute object-cover w-full h-full">
+                                    </div>
+                                    <!-- Div Texte -->
+                                    <div class="h-auto">
+                                        <div class="xl:w-10/12 w-11/12  pt-3">
+                                            <h3 class="text-xl md:text-2xl font-bold">Titre Projet 1</h3>
+                                            <p class="text-gray-600 dark:text-gray-300 mt-2">Description du projet avec
+                                                détails importants.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+ <section class="py-12 md:py-20 lg:py-20 relative overflow-hidden">
+    <!-- Fond décoratif -->
+    <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+    
+    <div class="xl:w-10/12 w-full px-4 mx-auto">
+        <!-- En-tête -->
+        <div class="xl:flex justify-center gap-24 space-y-10 md:space-y-0 mb-16">
+            <div class="lg:w-1/3 xl:w-1/3">
+                <div class="flex items-center gap-8 py-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                    <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 font-medium text-lg text-white">01</span>
+                    <hr class="border-line w-20 border-t border-[#e6e6e6]">
+                    <span class="rounded-full px-5 py-1 bg-black text-lg text-white">Expertises</span>
+                </div>
+            </div>
+
+            <div class="lg:w-2/3 xl:w-7/12">
+                <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-3xl font-bold md:text-5xl">Notre Savoir-Faire Unique</h2>
+                    <p class="text-lg text-[#9fa5a6]">Trois disciplines, une même exigence : l'excellence opérationnelle au service de votre image.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services - Version interactive -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+            <!-- Menuiserie -->
+            <div class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="h-48 bg-[url('https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/10 transition-all duration-500"></div>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Menuiserie Premium</h3>
+                    <p class="text-gray-600 mb-4">Créations sur-mesure alliant tradition et innovation pour des espaces uniques.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Mobilier haut de gamme</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Agencement intérieur</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Rénovation experte</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Impression -->
+            <div class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="h-48 bg-[url('https://images.unsplash.com/photo-1603302576837-37561b2e2302')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-purple-900/30 group-hover:bg-purple-900/10 transition-all duration-500"></div>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-purple-100 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Impressions Professionnelles</h3>
+                    <p class="text-gray-600 mb-4">Solutions d'impression innovantes pour une communication impactante.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Supports publicitaires</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Branding d'espaces</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Packaging créatif</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Coaching -->
+            <div class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="h-48 bg-[url('https://images.unsplash.com/photo-1542626991-cbc4e32524cc')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-green-900/30 group-hover:bg-green-900/10 transition-all duration-500"></div>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mb-4 rounded-lg bg-green-100 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Coaching Entrepreneurial</h3>
+                    <p class="text-gray-600 mb-4">Développez votre mindset pour atteindre l'excellence professionnelle.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Stratégie business</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Leadership</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Productivité optimale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- <section class="py-10 bg-white animate-fade-in">
+        <div class="w-11/12 md:w-10/12 mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+               
+                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
+                    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+                        alt="Atelier menuiserie"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Menuiserie</h3>
+                            <p class="text-white/90 mb-4">L'art du bois transformé en créations uniques et
+                                fonctionnelles</p>
+                            <a href="#services"
+                                class="inline-flex items-center text-white hover:text-secondary font-medium">
+                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+                        alt="Atelier imprimerie"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Imprimerie</h3>
+                            <p class="text-white/90 mb-4">Donner vie à vos idées avec des techniques d'impression
+                                artisanales</p>
+                            <a href="#services"
+                                class="inline-flex items-center text-white hover:text-secondary font-medium">
+                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
+                    <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
+                        alt="Développement personnel"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Mindset</h3>
+                            <p class="text-white/90 mb-4">Développez votre potentiel créatif et entrepreneurial</p>
+                            <a href="#services"
+                                class="inline-flex items-center text-white hover:text-secondary font-medium">
+                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée des animations (correspond à vos data-aos-duration)
+            once: true // Les animations ne se jouent qu'une fois
+        });
+    </script>
+</body>
+
+</html>
