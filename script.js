@@ -58,3 +58,6 @@ window.addEventListener('scroll', function () {
         contact.classList.remove('text-black')
     }
 });
+
+
+
