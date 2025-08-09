@@ -55,16 +55,16 @@
                     <a href="" class="text-[#145bff] text-2xl">fred-sympoz</a>
                 </div>
                 <div class="hidden xl:flex w-auto h-full flex justify-center items-center">
-                    <ul class="write flex items-center justify-between text-white text-lg gap-7 w-full">
-                        <li><a href="">Acceuil</a></li>
-                        <li><a href="">A propos</a></li>
+                    <ul class="flex items-center justify-between text-white text-lg gap-7 w-full scroll-color-change">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="about.html">A propos</a></li>
                         <li><a href="">Services</a></li>
                         <li><a href="">Realisations</a></li>
                         <li><a href="">Blog</a></li>
                     </ul>
                 </div>
                 <div class="hidden xl:flex w-auto text-end h-full flex justify-end items-center gap-5">
-                    <a href="" class="contact font-semibold text-white">Contact</a>
+                    <a href="" class="font-semibold text-white scroll-color-change">Contact</a>
                     <a href="#"
                         class="font-semibold bg-[#145bff] px-6 py-2 rounded-full text-white flex items-center gap-2 hover:bg-[#0e4acc] transition">
                         <i class="fas fa-shopping-cart"></i> Notre Boutique
@@ -271,13 +271,9 @@
         </div>
     </section>
 
-    <section class="py-12 md:py-20 lg:py-20 relative overflow-hidden">
-        <!-- Fond décoratif -->
-        <div
-            class="absolute -right-20 -top-20 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20">
-        </div>
+    <section class="py-12 md:py-20 lg:py-20">
 
-        <div class="xl:w-10/12 w-full px-4 mx-auto">
+        <div class="xl:w-10/12 w-full h-auto px-4 mx-auto">
             <!-- En-tête -->
             <div class="xl:flex justify-center gap-24 space-y-10 md:space-y-0 mb-16">
                 <div class="lg:w-1/3 xl:w-1/3">
@@ -299,39 +295,66 @@
                 </div>
             </div>
 
-            <!-- Services - Version interactive -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
-                <!-- Menuiserie -->
-
-
-                <!-- Impression -->
-
-
-                <!-- Coaching -->
-
+            <!-- Services - Version interactive -- data-aos="fade-up" data-aos-delay="200-->
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Menuiserie -->
+    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
+        <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
+                <i class="fas fa-hammer"></i> <!-- Icône menuiserie -->
             </div>
+            <p class="mt-7 text-lg font-semibold text-black">L'Artisanat Moderne Réinventé</p>
+            <p class="mt-3 text-[#9fa5a6]">
+                Trois disciplines, une même exigence : l'excellence opérationnelle au service de votre image.
+            </p>
+        </div>
+        <p class="mt-6 text-blue-600 font-medium">
+            <a href="#">En savoir plus</a>
+        </p>
+    </div>
+
+    <!-- Impression -->
+    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
+        <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
+                <i class="fas fa-print"></i> <!-- Icône impression -->
+            </div>
+            <p class="mt-7 text-lg font-semibold text-black">Impressions Professionnelles</p>
+            <p class="mt-3 text-[#9fa5a6]">
+                Solutions d'impression innovantes pour une communication impactante.
+            </p>
+        </div>
+        <p class="mt-6 text-blue-600 font-medium">
+            <a href="#">En savoir plus</a>
+        </p>
+    </div>
+
+    <!-- Coaching -->
+    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
+        <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
+                <i class="fas fa-chalkboard-teacher"></i> <!-- Icône coaching -->
+            </div>
+            <p class="mt-7 text-lg font-semibold text-black">Coaching Entrepreneurial</p>
+            <p class="mt-3 text-[#9fa5a6]">
+                Développez votre mindset pour atteindre l'excellence professionnelle.
+            </p>
+        </div>
+        <p class="mt-6 text-blue-600 font-medium">
+            <a href="#">En savoir plus</a>
+        </p>
+    </div>
+</div>
+
         </div>
     </section>
 
-    <section id="get-started-today" class="relative overflow-hidden bg-blue-600 py-24"><img alt="" loading="lazy"
-            width="2347" height="1244" decoding="async" data-nimg="1"
-            class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" style="color:transparent"
-            src="/_next/static/media/background-call-to-action.6a5a5672.jpg">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-            <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold md:text-5xl">Get started today</h2>
-                <p class="mt-4 text-lg tracking-tight text-white">It’s time to take control of your books. Buy our
-                    software so you can feel like you’re doing something productive.</p><a
-                    class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
-                    color="white" variant="solid" href="/register">Get 6 months free</a>
-            </div>
-        </div>
-    </section>
+
 
 
     <!-- Bouton WhatsApp fixe -->
     <a href="https://wa.me/VOTRE_NUMERO" target="_blank"
-        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 animate-bounce"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-blue-600 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 animate-bounce"
         aria-label="Contactez-nous sur WhatsApp">
         <!-- Icône WhatsApp -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
@@ -401,6 +424,99 @@
             </div>
         </div>
     </section> -->
+
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <!-- Contenu principal -->
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                <!-- Colonne Logo + Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl font-bold mr-2">FRED SYMPOZ</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">EXPERT</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Artisanat d'excellence et innovation digitale. Nous unissons savoir-faire traditionnel
+                        et technologies modernes pour des résultats exceptionnels.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne Menuiserie -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 flex items-center">
+                        <i class="fas fa-hammer text-blue-400 mr-2"></i>
+                        Menuiserie
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mobilier sur-mesure</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agencement intérieur</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Rénovation experte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Formations métier</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Impression -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 flex items-center">
+                        <i class="fas fa-print text-purple-400 mr-2"></i>
+                        Impression
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Supports publicitaires</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Branding d'espaces</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Packaging premium</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Signalétique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Coaching -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 flex items-center">
+                        <i class="fas fa-brain text-green-400 mr-2"></i>
+                        Coaching
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stratégie business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Productivité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ateliers mindset</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Séparateur -->
+            <div class="border-t border-gray-800 my-12"></div>
+
+            <!-- Bas de footer -->
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2023 Fred Sympoz. Tous droits réservés.
+                </div>
+                <div class="flex items-center justify-center">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Mentions légales</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">CGV</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Politique de
+                        confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
