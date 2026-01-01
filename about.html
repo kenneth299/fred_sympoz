@@ -15,17 +15,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
-    body {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Style des titres */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-titles);
+        font-weight: 700;
     }
 
-    h2 {
-        font-family: 'Times New Roman', Times, serif;
+    /* Style des paragraphes et textes courants */
+    p,
+    li,
+    a,
+    label {
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 1rem;
+        /* 16px */
+        line-height: 1.6;
+        /* Espacement pour une lecture fluide */
+        color: var(--text-color);
+    }
+
+    /* Accentuation pour les menus ou éléments importants */
+    .nav-link,
+    .btn {
+        font-family: var(--font-body);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .navbar.scrolled {
         /* Style quand la navbar a défilé */
-        background-color: white;
+        background-color: #111014;
         /* Couleur quand scrollé */
         animation: navbarAnimation 0.5s ease-out forwards;
         /* Ombre optionnelle */
@@ -46,19 +70,21 @@
 
 <body class="bg-[#fffffc]">
 
-    <section class="w-full h-screen relative"
+    <section class="w-full h-96 relative"
         style="background-image: url(./assects/484732103_1220383923425518_3938317128079128_n.jpg); overflow: hidden; object-fit: cover;">
-        <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-        <nav class="navbar bg-transparent w-full h-16 flex items-center justify-center fixed top-0 z-10">
+        <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+        <nav class="navbar bg-transparent w-full h-20 flex items-center justify-center fixed top-0 z-10">
             <div class=" w-11/12 h-10 flex justify-between items-center gap-5">
-                <div class="w-auto  h-full flex justify-between items-center">
-                    <a href="" class="text-[#145bff] text-2xl">fred-sympoz</a>
+                <div class="h-10 sm:h-12 flex items-center">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-full object-contain max-w-[180px]" />
                 </div>
+
                 <div class="hidden xl:flex w-auto h-full flex justify-center items-center">
                     <ul class="flex items-center justify-between text-white text-lg gap-7 w-full scroll-color-change">
                         <li><a href="index.html">Acceuil</a></li>
                         <li><a href="about.html">A propos</a></li>
-                        <li><a href="">Services</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="">Realisations</a></li>
                         <li><a href="">Blog</a></li>
                     </ul>
@@ -71,7 +97,7 @@
                     </a>
                 </div>
                 <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
-                    <button class="py-2 p-3 rounded-xl border-2">
+                    <button class="py-2 p-3 rounded-xl border-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,211 +109,149 @@
         </nav>
 
         <section class="w-full h-full py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative  z-1">
-            <div class="mx-auto max-w-7xl lg:mt-14 mt-16">
+            <div class="mx-auto max-w-7xl mt-24 md:mt-16">
                 <div class="flex flex-col items-center text-center">
                     <!-- Titre avec soulignement SVG -->
-                    <div class="mb-8 md:mb-5">
-                        <h2
-                            class="text-4xl lg:max-w-5xl font-bold leading-tight sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
-                            <span class="inline-block text-blue-600">
-                                <span class="relative">Créez, imprimez, progressez…</span>
-                            </span>
-                            <span class="block sm:inline text-white">un résultat qui impressionne.</span>
+                    <div class="mb-8 md:mb-5 gap-2 items-center justify-center flex flex-col">
+                        <h2 class="text-4xl lg:max-w-5xl sm:text-5xl md:text-6xl text-white">
+                            Qui sommes nous ?
                         </h2>
-                    </div>
-
-                    <!-- Sous-titre -->
-                    <div class="mb-10 max-w-2xl">
-                        <p class="text-lg text-white md:text-xl">
-                            Menuiserie, impressions professionnelles et coaching mindset réunis sur une seule
-                            plateforme.
-                        </p>
-                    </div>
-
-                    <!-- Boutons -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                            class="inline-flex items-center rounded-full gap-2 px-6 py-3 text-sm font-semibold text-white ring-1 ring-gray-200 hover:bg-blue-600 hover:ring-0 focus-visible:outline-blue-600 transition-all duration-200">
-                            <i class="fas fa-file-invoice-dollar mr-2"></i>Demander un devis
-                        </a>
+                        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-
-    <section class="py-12 md:py-20 lg:py-24">
-        <div class="md:w-10/12 w-full mx-auto px-4">
-            <div class="flex flex-col gap-12 lg:gap-20">
-                <!-- Première partie : Texte descriptif -->
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-0">
-                    <div class="lg:w-1/3">
-                        <h2 class="text-5xl font-bold mb-0 text-blue-600" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-                            Fred-sympoz.
-                        </h2>
-                    </div>
-                    <div class="lg:w-2/3">
-                        <div class="flex flex-col gap-6 lg:gap-8" data-aos="fade-up" data-aos-delay="200"
-                            data-aos-duration="1000">
-                            <p class="text-lg text-gray-900">
-                                It's a canvas for your creativity. It's your opportunity to transform bold ideas into
-                                dynamic, interactive experiences. Your work can shape identities, tell compelling
-                                stories, or spark meaningful change. As the digital landscape grows, so do the
-                                possibilities. And whether you thrive working remotely or in a buzzing agency space, the
-                                thrill of seeing your vision come to life is unmatched.
-                            </p>
-                            <p class="text-lg text-gray-900">
-                                At Studiova, we bring ideas to life through a range of services: branding, web
-                                development, agency solutions, content creation, SaaS, and motion & 3D modeling. As a
-                                web designer, you merge artistry and technology to craft "digital experiences" that
-                                inform, captivate, and inspire. Every day brings something new — one moment you're
-                                sketching innovative concepts, the next you're turning them into seamless, responsive
-                                designs. Web design keeps you pushing boundaries and creating at every turn!
-                            </p>
-                        </div>
-                    </div>
+   <section class="py-12 md:py-20 lg:py-24 bg-white">
+    <div class="md:w-10/12 w-full mx-auto px-4">
+        <div class="flex flex-col gap-12 lg:gap-24">
+            
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <div class="lg:w-1/3">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#145bff]" data-aos="fade-right">
+                        Notre Histoire
+                    </h2>
+                    <div class="w-20 h-1.5 bg-gray-200 rounded-full"></div>
                 </div>
-
-                <!-- Deuxième partie : Statistiques -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                    <!-- Stat 1 -->
-                    <div class="flex flex-col gap-8 border-b border-gray-200 pb-8" data-aos="fade-up"
-                        data-aos-delay="100" data-aos-duration="1000">
-                        <h2 class="text-5xl font-bold pb-8 border-b border-gray-200">
-                            <span class="count" data-target="45">45</span>+
-                        </h2>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-xl font-semibold mb-0">Presence in global markets</h4>
-                            <p class="text-gray-600 mb-0">
-                                Expanding reach across international regions with localized expertise and worldwide
-                                impact.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Stat 2 -->
-                    <div class="flex flex-col gap-8 border-b border-gray-200 pb-8" data-aos="fade-up"
-                        data-aos-delay="200" data-aos-duration="1000">
-                        <h2 class="text-5xl font-bold pb-8 border-b border-gray-200">
-                            <span class="count" data-target="15">15</span>M
-                        </h2>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-xl font-semibold mb-0">In strategic investments</h4>
-                            <p class="text-gray-600 mb-0">
-                                Driving growth with curated partnerships and high-performing, audience-driven
-                                initiatives.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Stat 3 -->
-                    <div class="flex flex-col gap-8 border-b border-gray-200 pb-8" data-aos="fade-up"
-                        data-aos-delay="300" data-aos-duration="1000">
-                        <h2 class="text-5xl font-bold pb-8 border-b border-gray-200">
-                            <span class="count" data-target="158">158</span>+
-                        </h2>
-                        <div class="flex flex-col gap-4">
-                            <h4 class="text-xl font-semibold mb-0">Trusted brand collaborations</h4>
-                            <p class="text-gray-600 mb-0">
-                                Shaping industry conversations through innovation, creativity, and lasting influence.
-                            </p>
-                        </div>
+                <div class="lg:w-2/3">
+                    <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-xl font-semibold text-gray-900 leading-relaxed">
+                            Le Groupe Anonymat est né d'une volonté simple : moderniser la gestion des collectivités et dynamiser le secteur privé au Bénin.
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            Nous ne sommes pas qu'un cabinet de conseil. Nous sommes un partenaire de terrain qui allie l'expertise fiscale à la puissance du marketing digital. Notre approche multidisciplinaire nous permet d'accompagner aussi bien les mairies dans l'optimisation de leurs recettes que les entreprises dans leur conquête de nouveaux marchés.
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-gray-50 rounded-3xl" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-100 text-[#145bff] rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Transparence</h3>
+                    <p class="text-gray-600">Nous croyons en une gestion claire, particulièrement dans la collecte et l'optimisation fiscale.</p>
+                </div>
+                
+                <div class="p-8 bg-gray-50 rounded-3xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-blue-100 text-[#145bff] rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Innovation</h3>
+                    <p class="text-gray-600">Utiliser les outils digitaux pour simplifier les processus administratifs et commerciaux.</p>
+                </div>
+
+                <div class="p-8 bg-gray-50 rounded-3xl" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-blue-100 text-[#145bff] rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Engagement</h3>
+                    <p class="text-gray-600">Votre succès est notre priorité, que vous soyez une institution publique ou une PME.</p>
+                </div>
+            </div>
+
+            <div class="bg-[#111014] rounded-[2rem] p-10 md:p-16 text-white flex flex-wrap justify-between gap-10">
+                <div class="flex flex-col gap-2" data-aos="fade-up">
+                    <span class="text-4xl md:text-5xl font-bold text-[#00bdff]">10+</span>
+                    <span class="text-gray-400 uppercase tracking-widest text-sm">Années d'expertise</span>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-4xl md:text-5xl font-bold text-[#00bdff]">50+</span>
+                    <span class="text-gray-400 uppercase tracking-widest text-sm">Projets réussis</span>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-4xl md:text-5xl font-bold text-[#00bdff]">15+</span>
+                    <span class="text-gray-400 uppercase tracking-widest text-sm">Partenaires publics</span>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-4xl md:text-5xl font-bold text-[#00bdff]">100%</span>
+                    <span class="text-gray-400 uppercase tracking-widest text-sm">Satisfaction client</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
 
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <!-- Contenu principal -->
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
-                <!-- Colonne Logo + Description -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center mb-6">
-                        <span class="text-3xl font-bold mr-2">FRED SYMPOZ</span>
-                        <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">EXPERT</span>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        Artisanat d'excellence et innovation digitale. Nous unissons savoir-faire traditionnel
-                        et technologies modernes pour des résultats exceptionnels.
+
+    <footer class="bg-[#111014] text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-12 object-contain mb-6" />
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Solutions stratégiques en fiscalité, communication et accompagnement des entreprises au Bénin.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- Colonne Menuiserie -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-hammer text-blue-400 mr-2"></i>
-                        Menuiserie
-                    </h3>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Navigation</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mobilier sur-mesure</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agencement intérieur</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Rénovation experte</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Formations métier</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonne Impression -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-print text-purple-400 mr-2"></i>
-                        Impression
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Supports publicitaires</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Nos Services</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Branding d'espaces</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Packaging premium</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Signalétique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Colonne Coaching -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-brain text-green-400 mr-2"></i>
-                        Coaching
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stratégie business</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Leadership</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Productivité</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ateliers mindset</a></li>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Contactez-nous</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-map-marker-alt text-[#145bff]"></i> Cotonou, Bénin
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-phone-alt text-[#145bff]"></i> +229 XX XX XX XX
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-envelope text-[#145bff]"></i> contact@groupeanonymat.com
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Séparateur -->
-            <div class="border-t border-gray-800 my-12"></div>
+            <div class="border-t border-gray-800 my-10"></div>
 
-            <!-- Bas de footer -->
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-gray-500 text-sm mb-4 md:mb-0">
-                    © 2023 Fred Sympoz. Tous droits réservés.
-                </div>
-                <div class="flex items-center justify-center">
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Mentions légales</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">CGV</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Politique de
-                        confidentialité</a>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>© 2026 Groupe Anonymat, tous droit réserves.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition">Confidentialité</a>
                 </div>
             </div>
         </div>

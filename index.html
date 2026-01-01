@@ -5,27 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>fred-sympoz</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
-    body {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Style des titres */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-titles);
+        font-weight: 700;
     }
 
-    h2 {
-        font-family: 'Times New Roman', Times, serif;
+    /* Style des paragraphes et textes courants */
+    p,
+    li,
+    a,
+    label {
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 1rem;
+        /* 16px */
+        line-height: 1.6;
+        /* Espacement pour une lecture fluide */
+        color: var(--text-color);
+    }
+
+    /* Accentuation pour les menus ou éléments importants */
+    .nav-link,
+    .btn {
+        font-family: var(--font-body);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .navbar.scrolled {
         /* Style quand la navbar a défilé */
-        background-color: white;
+        background-color: #111014;
         /* Couleur quand scrollé */
         animation: navbarAnimation 0.5s ease-out forwards;
         /* Ombre optionnelle */
@@ -48,17 +74,19 @@
 
     <section class="w-full h-screen relative"
         style="background-image: url(./assects/484732103_1220383923425518_3938317128079128_n.jpg); overflow: hidden; object-fit: cover;">
-        <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-        <nav class="navbar bg-transparent w-full h-16 flex items-center justify-center fixed top-0 z-10">
+        <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+        <nav class="navbar bg-transparent w-full h-20 flex items-center justify-center fixed top-0 z-10">
             <div class=" w-11/12 h-10 flex justify-between items-center gap-5">
-                <div class="w-auto  h-full flex justify-between items-center">
-                    <a href="" class="text-[#145bff] text-2xl">fred-sympoz</a>
+                <div class="h-10 sm:h-12 flex items-center">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-full object-contain max-w-[180px]" />
                 </div>
+
                 <div class="hidden xl:flex w-auto h-full flex justify-center items-center">
                     <ul class="flex items-center justify-between text-white text-lg gap-7 w-full scroll-color-change">
                         <li><a href="index.html">Acceuil</a></li>
                         <li><a href="about.html">A propos</a></li>
-                        <li><a href="">Services</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="">Realisations</a></li>
                         <li><a href="">Blog</a></li>
                     </ul>
@@ -71,7 +99,8 @@
                     </a>
                 </div>
                 <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
-                    <button class="py-2 p-3 rounded-xl border-2">
+                    <button id="openMobileMenu"
+                        class="p-2 rounded-xl border-2 border-white/30 text-white hover:bg-white/10 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,20 +116,21 @@
                 <div class="flex flex-col items-center text-center">
                     <!-- Titre avec soulignement SVG -->
                     <div class="mb-8 md:mb-5">
-                        <h2
-                            class="text-4xl lg:max-w-5xl font-bold leading-tight sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
+                        <h2 class="text-4xl lg:max-w-5xl sm:text-5xl md:text-6xl">
                             <span class="inline-block text-blue-600">
-                                <span class="relative">Créez, imprimez, progressez…</span>
+                                <span class="relative">
+                                    Votre partenaire de confiance
+                                </span>
                             </span>
-                            <span class="block sm:inline text-white">un résultat qui impressionne.</span>
+                            <span class="block sm:inline text-white">pour une gestion de proximité</span>
                         </h2>
                     </div>
 
                     <!-- Sous-titre -->
                     <div class="mb-10 max-w-2xl">
                         <p class="text-lg text-white md:text-xl">
-                            Menuiserie, impressions professionnelles et coaching mindset réunis sur une seule
-                            plateforme.
+                            Fiscalité locale, communication, accompagnement organisationnel et solutions digitales pour
+                            une performance durable.
                         </p>
                     </div>
 
@@ -115,6 +145,40 @@
             </div>
         </section>
     </section>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[100] invisible">
+        <div id="closeMobileMenu" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        </div>
+
+        <div id="menuContent" class="overflow-y-auto absolute top-0 right-0 w-80 h-full bg-[#121212] p-8 shadow-2xl transition-transform translate-x-full">
+            <div class="flex justify-between items-center mb-12">
+                <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Logo" class="h-8 object-contain" />
+                <button id="btnExit" class="text-white p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>kenneth299/refronte-groupe-anonymat
+
+            <nav class="flex flex-col gap-6 text-xl text-white">
+                <a href="index.html" class="hover:text-[#145bff] transition">Accueil</a>
+                <a href="about.html" class="hover:text-[#145bff] transition">À propos</a>
+                <a href="services.html" class="hover:text-[#145bff] transition">Services</a>
+                <a href="#" class="hover:text-[#145bff] transition">Réalisations</a>
+                <a href="#" class="hover:text-[#145bff] transition">Blog</a>
+
+                <div class="h-px bg-white/10 my-4"></div>
+
+                <a href="#" class="text-lg">Contact</a>
+                <a href="#" class="bg-[#145bff] py-3 rounded-xl text-center text-lg font-bold">
+                    <i class="fas fa-shopping-cart mr-2"></i> Boutique
+                </a>
+            </nav>
+        </div>
+    </div>
 
     <section class="py-12 md:py-20 lg:py-20 flex justify-center align-center flex-col">
         <h2 class="font-display text-center text-3xl font-bold md:text-5xl text-slate-900">Ils nous font confiance</h2>
@@ -170,57 +234,203 @@
                 <div class="flex flex-col gap-9">
                     <!-- Title Section -->
                     <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
-                        <h2 class="text-3xl font-bold md:text-5xl">L'excellence artisanale, l'innovation digitale</h2>
-                        <p class="text-lg text-[#9fa5a6]">Chez Fred Sympoz, nous fusionnons savoir-faire manuel,
-                            précision
-                            technique et développement personnel pour des
-                            résultats qui transcendent les attentes.</p>
+                        <h2 class="text-3xl font-bold md:text-5xl">À propos de Groupe Anonymat</h2>
+                        <p class="text-lg text-[#9fa5a6]">
+                            Groupe Anonymat est un cabinet spécialisé dans l'accompagnement fiscal, la communication
+                            digitale et le développement de plateformes numériques sur mesure pour les entreprises et
+                            particuliers.
+                        </p>
                     </div>
 
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        <!-- Stat 1 - Menuiserie -->
-                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="200">
-                            <div class="flex flex-col gap-6">
-                                <h2 class="text-4xl font-bold text-gray-900">
-                                    <span class="count" data-target="250">250</span>+
-                                </h2>
-                                <p class="text-[#9fa5a6]">Projets de menuiserie réalisés sur-mesure</p>
+
+                        <div class="group border-t-2 border-gray-100 pt-9 transition-all duration-300 hover:border-[#1A237E]"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1A237E] group-hover:bg-[#1A237E] group-hover:text-white transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                </div>
+                                <div class="space-y-2">
+                                    <h2 class="text-5xl text-gray-900 tracking-tight">
+                                        <span class="count" data-target="10">10</span>+
+                                    </h2>
+                                    <p class="text-sm font-semibold uppercase tracking-wider text-[#9fa5a6]">Années
+                                        d'expérience</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Stat 2 - Impression -->
-                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="300">
-                            <div class="flex flex-col gap-6">
-                                <h2 class="text-4xl font-bold text-gray-900">
-                                    <span class="count" data-target="5000">5000</span>+
-                                </h2>
-                                <p class="text-[#9fa5a6]">Produits imprimés livrés avec excellence</p>
+                        <div class="group border-t-2 border-gray-100 pt-9 transition-all duration-300 hover:border-[#1A237E]"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1A237E] group-hover:bg-[#1A237E] group-hover:text-white transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <div class="space-y-2">
+                                    <h2 class="text-5xl text-gray-900 tracking-tight">
+                                        <span class="count" data-target="5000">5000</span>+
+                                    </h2>
+                                    <p class="text-sm font-semibold uppercase tracking-wider text-[#9fa5a6]">Produits
+                                        livrés avec excellence</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Stat 3 - Coaching -->
-                        <div class="border-t border-gray-200 pt-9" data-aos="fade-up" data-aos-delay="400">
-                            <div class="flex flex-col gap-6">
-                                <h2 class="text-4xl font-bold text-gray-900">
-                                    <span class="count" data-target="100">100</span>+
-                                </h2>
-                                <p class="text-[#9fa5a6]">Entrepreneurs accompagnés vers le succès</p>
+                        <div class="group border-t-2 border-gray-100 pt-9 transition-all duration-300 hover:border-[#1A237E]"
+                            data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#1A237E] group-hover:bg-[#1A237E] group-hover:text-white transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="space-y-2">
+                                    <h2 class="text-5xl text-gray-900 tracking-tight">
+                                        <span class="count" data-target="100">100</span>+
+                                    </h2>
+                                    <p class="text-sm font-semibold uppercase tracking-wider text-[#9fa5a6]">
+                                        Entrepreneurs accompagnés</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Button -->
                     <a href="#"
-                        class="font-semibold bg-[#145bff] w-60 text-lg px-6 py-3 rounded-full text-white flex items-center gap-2 hover:bg-[#0e4acc] transition">
-                        <i class="fas fa-building mr-2"></i>Qui sommes-nous ?
+                        class="font-semibold bg-[#145bff] w-fit text-lg px-6 py-2 rounded-full text-white flex items-center gap-2 hover:bg-[#0e4acc] transition">
+                        Qui sommes-nous ?
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-12 md:py-20 lg:py-10 flex justify-center align-center">
+    <section class="py-12 md:py-20 lg:py-20 mt-10 flex justify-center align-center">
+        <div class="xl:w-10/12 w-full px-4 xl:flex justify-center gap-24 space-y-10 md:space-y-0">
+            <!-- Left Column -->
+            <div class="lg:w-1/3 xl:w-1/3">
+                <div class="flex items-center gap-8 py-2" data-aos="fade-right" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <span
+                        class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 font-medium text-lg text-white">01</span>
+                    <hr class="border-line w-20 border-t border-[#e6e6e6]">
+                    <span class="rounded-full px-5 py-1 bg-black text-lg text-white">Difference</span>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:w-2/3 xl:w-7/12">
+                <div class="flex flex-col gap-9">
+                    <!-- Title Section -->
+                    <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-3xl font-bold md:text-5xl">Pourquoi nous chosir ?</h2>
+                        <p class="text-lg text-[#9fa5a6]">
+                            Plus qu'un prestataire, nous sommes votre partenaire stratégique au Bénin. Nous allions
+                            rigueur administrative et innovation créative.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="flex gap-5 p-6 rounded-2xl transition-all hover:bg-gray-50">
+                            <div
+                                class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-blue-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Expertise Fiable</h3>
+                                <p class="text-gray-500">Une maîtrise profonde des enjeux fiscaux et administratifs
+                                    locaux pour une gestion sans faille.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5 p-6 rounded-2xl transition-all hover:bg-gray-50">
+                            <div
+                                class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-blue-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 16v-4" />
+                                    <path d="M12 8h.01" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Vision 360°</h3>
+                                <p class="text-gray-500">Un guichet unique pour votre communication, vos événements et
+                                    vos besoins opérationnels.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5 p-6 rounded-2xl transition-all hover:bg-gray-50">
+                            <div
+                                class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-blue-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                    <polyline points="16 7 22 7 22 13"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Croissance Garantie</h3>
+                                <p class="text-gray-500">Des stratégies de marketing et de coaching orientées
+                                    exclusivement vers vos objectifs de performance.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5 p-6 rounded-2xl transition-all hover:bg-gray-50">
+                            <div
+                                class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-lg bg-blue-600 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Équipe Dévouée</h3>
+                                <p class="text-gray-500">Des conseillers et créatifs passionnés qui s'immergent
+                                    totalement dans votre univers.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 lg:py-20 flex justify-center align-center">
         <div class="xl:w-10/12 w-11/12 h-auto flex justify-center align-center flex-col gap-10 lg:gap-20">
             <div class="w-full px-4 xl:flex justify-center gap-24 space-y-10 md:space-y-0">
                 <!-- Left Column -->
@@ -295,57 +505,99 @@
                 </div>
             </div>
 
-            <!-- Services - Version interactive -- data-aos="fade-up" data-aos-delay="200-->
-           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Menuiserie -->
-    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
-        <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
-                <i class="fas fa-hammer"></i> <!-- Icône menuiserie -->
-            </div>
-            <p class="mt-7 text-lg font-semibold text-black">L'Artisanat Moderne Réinventé</p>
-            <p class="mt-3 text-[#9fa5a6]">
-                Trois disciplines, une même exigence : l'excellence opérationnelle au service de votre image.
-            </p>
-        </div>
-        <p class="mt-6 text-blue-600 font-medium">
-            <a href="#">En savoir plus</a>
-        </p>
-    </div>
+            <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-    <!-- Impression -->
-    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
-        <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
-                <i class="fas fa-print"></i> <!-- Icône impression -->
-            </div>
-            <p class="mt-7 text-lg font-semibold text-black">Impressions Professionnelles</p>
-            <p class="mt-3 text-[#9fa5a6]">
-                Solutions d'impression innovantes pour une communication impactante.
-            </p>
-        </div>
-        <p class="mt-6 text-blue-600 font-medium">
-            <a href="#">En savoir plus</a>
-        </p>
-    </div>
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
 
-    <!-- Coaching -->
-    <div class="w-full h-full py-10 flex flex-col justify-between bg-white rounded-xl shadow-md p-6">
-        <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-600 text-2xl flex items-center justify-center text-white">
-                <i class="fas fa-chalkboard-teacher"></i> <!-- Icône coaching -->
-            </div>
-            <p class="mt-7 text-lg font-semibold text-black">Coaching Entrepreneurial</p>
-            <p class="mt-3 text-[#9fa5a6]">
-                Développez votre mindset pour atteindre l'excellence professionnelle.
-            </p>
-        </div>
-        <p class="mt-6 text-blue-600 font-medium">
-            <a href="#">En savoir plus</a>
-        </p>
-    </div>
-</div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Gouvernance & Fiscalité</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Optimisation des recettes locales et conseil stratégique pour la gestion transparente
+                                des collectivités.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-[#1A237E] opacity-0 group-hover:opacity-100 transition-opacity">
+                                En savoir plus <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Business Solutions</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Assistance administrative, formations sur mesure et accompagnement des entreprises vers
+                                l'excellence.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-[#1A237E] opacity-0 group-hover:opacity-100 transition-opacity">
+                                En savoir plus <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                <circle cx="5" cy="19" r="1"></circle>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Média & Événementiel</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Stratégie digitale, création de contenu et organisation d'événements professionnels
+                                mémorables.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center text-sm font-semibold text-[#1A237E] opacity-0 group-hover:opacity-100 transition-opacity">
+                                En savoir plus <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -363,156 +615,62 @@
         </svg>
     </a>
 
-    <!-- <section class="py-10 bg-white animate-fade-in">
-        <div class="w-11/12 md:w-10/12 mx-auto">
-            <div class="grid md:grid-cols-3 gap-8">
-               
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
-                    <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
-                        alt="Atelier menuiserie"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Menuiserie</h3>
-                            <p class="text-white/90 mb-4">L'art du bois transformé en créations uniques et
-                                fonctionnelles</p>
-                            <a href="#services"
-                                class="inline-flex items-center text-white hover:text-secondary font-medium">
-                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-               
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
-                        alt="Atelier imprimerie"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Imprimerie</h3>
-                            <p class="text-white/90 mb-4">Donner vie à vos idées avec des techniques d'impression
-                                artisanales</p>
-                            <a href="#services"
-                                class="inline-flex items-center text-white hover:text-secondary font-medium">
-                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-              
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-96 group">
-                    <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
-                        alt="Développement personnel"
-                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-2 font-serif">Mindset</h3>
-                            <p class="text-white/90 mb-4">Développez votre potentiel créatif et entrepreneurial</p>
-                            <a href="#services"
-                                class="inline-flex items-center text-white hover:text-secondary font-medium">
-                                Découvrir <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
 
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <!-- Contenu principal -->
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
-                <!-- Colonne Logo + Description -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center mb-6">
-                        <span class="text-3xl font-bold mr-2">FRED SYMPOZ</span>
-                        <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">EXPERT</span>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        Artisanat d'excellence et innovation digitale. Nous unissons savoir-faire traditionnel
-                        et technologies modernes pour des résultats exceptionnels.
+    <footer class="bg-[#111014] text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-12 object-contain mb-6" />
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Solutions stratégiques en fiscalité, communication et accompagnement des entreprises au Bénin.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- Colonne Menuiserie -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-hammer text-blue-400 mr-2"></i>
-                        Menuiserie
-                    </h3>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Navigation</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mobilier sur-mesure</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agencement intérieur</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Rénovation experte</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Formations métier</a></li>
-                    </ul>
-                </div>
-
-                <!-- Colonne Impression -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-print text-purple-400 mr-2"></i>
-                        Impression
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Supports publicitaires</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Nos Services</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Branding d'espaces</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Packaging premium</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Signalétique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Colonne Coaching -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-6 flex items-center">
-                        <i class="fas fa-brain text-green-400 mr-2"></i>
-                        Coaching
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stratégie business</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Leadership</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Productivité</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ateliers mindset</a></li>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Contactez-nous</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-map-marker-alt text-[#145bff]"></i> Cotonou, Bénin
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-phone-alt text-[#145bff]"></i> +229 XX XX XX XX
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-envelope text-[#145bff]"></i> contact@groupeanonymat.com
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Séparateur -->
-            <div class="border-t border-gray-800 my-12"></div>
+            <div class="border-t border-gray-800 my-10"></div>
 
-            <!-- Bas de footer -->
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-gray-500 text-sm mb-4 md:mb-0">
-                    © 2023 Fred Sympoz. Tous droits réservés.
-                </div>
-                <div class="flex items-center justify-center">
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Mentions légales</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">CGV</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Politique de
-                        confidentialité</a>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>© 2026 Groupe Anonymat, tous droit réserves.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition">Confidentialité</a>
                 </div>
             </div>
         </div>

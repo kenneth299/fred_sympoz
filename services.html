@@ -1,0 +1,430 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>fred-sympoz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    /* Style des titres */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-titles);
+        font-weight: 700;
+    }
+
+    /* Style des paragraphes et textes courants */
+    p,
+    li,
+    a,
+    label {
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 1rem;
+        /* 16px */
+        line-height: 1.6;
+        /* Espacement pour une lecture fluide */
+        color: var(--text-color);
+    }
+
+    /* Accentuation pour les menus ou éléments importants */
+    .nav-link,
+    .btn {
+        font-family: var(--font-body);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .navbar.scrolled {
+        /* Style quand la navbar a défilé */
+        background-color: #111014;
+        /* Couleur quand scrollé */
+        animation: navbarAnimation 0.5s ease-out forwards;
+        /* Ombre optionnelle */
+    }
+
+    @keyframes navbarAnimation {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<body class="bg-[#fffffc]">
+
+    <section class="w-full h-96 relative"
+        style="background-image: url(./assects/484732103_1220383923425518_3938317128079128_n.jpg); overflow: hidden; object-fit: cover;">
+        <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+        <nav class="navbar bg-transparent w-full h-20 flex items-center justify-center fixed top-0 z-10">
+            <div class=" w-11/12 h-10 flex justify-between items-center gap-5">
+                <div class="h-10 sm:h-12 flex items-center">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-full object-contain max-w-[180px]" />
+                </div>
+
+                <div class="hidden xl:flex w-auto h-full flex justify-center items-center">
+                    <ul class="flex items-center justify-between text-white text-lg gap-7 w-full scroll-color-change">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="">Realisations</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="hidden xl:flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <a href="" class="font-semibold text-white scroll-color-change">Contact</a>
+                    <a href="#"
+                        class="font-semibold bg-[#145bff] px-6 py-2 rounded-full text-white flex items-center gap-2 hover:bg-[#0e4acc] transition">
+                        <i class="fas fa-shopping-cart"></i> Notre Boutique
+                    </a>
+                </div>
+                <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <button class="py-2 p-3 rounded-xl border-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="w-full h-full py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative  z-1">
+            <div class="mx-auto max-w-7xl mt-24 md:mt-16">
+                <div class="flex flex-col items-center text-center">
+                    <!-- Titre avec soulignement SVG -->
+                    <div class="mb-8 md:mb-5 gap-2 items-center justify-center flex flex-col">
+                        <h2 class="text-4xl lg:max-w-5xl sm:text-5xl md:text-6xl text-white">
+                            Nos Services
+                        </h2>
+                        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="w-full items-center justify-center flex py-20 bg-[#fffffc]">
+        <div class="w-11/12 flex items-center justify-center flex-col">
+            <div class="text-center mb-16 w-full flex items-center justify-center flex-col">
+                <h2 class="text-3xl md:text-5xl text-gray-800 mb-4 max-w-3xl"> Quels services proposons-nous à nos
+                    clients et à leur entreprise ? </h2>
+                <div class="w-20 h-1 bg-[#00bdff] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Quels services proposons-nous à nos clients et à leur entreprise ?
+                    Services pharesServices pharesServices pharesServices pharesServices pharesServices pharesServices
+                    phares
+                </p>
+            </div>
+            <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Collecte de Taxes et Redevances</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous gérons la collecte des taxes municipales pour les collectivités locales, assurant
+                                un processus efficace et transparent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Conseil en Fiscalité Locale</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous vous accompagnons dans l’optimisation de vos recettes fiscales et le respect des
+                                obligations fiscales locales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Organisation d'Événements</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                De l’idée à la réalisation, nous organisons vos événements (séminaires, conférences,
+                                etc.) en garantissant leur succès.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 4l-2.1 4.7z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Stratégies de Communication</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous élaborons des stratégies de communication globales pour renforcer votre image et
+                                maximiser votre visibilité.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Création de Contenus</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                De la création de sites web à la gestion des réseaux sociaux, nous produisons des
+                                contenus attractifs et pertinents.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Publicité</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous gérons vos campagnes publicitaires (en ligne et hors ligne) pour accroître votre
+                                visibilité et générer des résultats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Assistance Administrative</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous vous offrons une gestion administrative complète pour simplifier vos processus
+                                quotidiens et améliorer votre productivité
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <polyline points="23 21 23 18 20 18"></polyline>
+                                <path d="M17 11a3 3 0 1 1-3-3"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Formations et Coaching Professionnel</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nos formations sur mesure vous permettent de renforcer les compétences de vos équipes et
+                                d’optimiser vos performances.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col gap-6">
+                        <div class="text-gray-900 group-hover:text-[#1A237E] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Commerce Général et Services Divers</h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                Nous proposons des produits et services variés, allant des fournitures de bureau au
+                                conseil sur des projets spécifiques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-[#111014] text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="./assects/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-12 object-contain mb-6" />
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Solutions stratégiques en fiscalité, communication et accompagnement des entreprises au Bénin.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#145bff] transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Nos Services</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Contactez-nous</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-map-marker-alt text-[#145bff]"></i> Cotonou, Bénin
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-phone-alt text-[#145bff]"></i> +229 XX XX XX XX
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-envelope text-[#145bff]"></i> contact@groupeanonymat.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 my-10"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>© 2026 Groupe Anonymat, tous droit réserves.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée des animations (correspond à vos data-aos-duration)
+            once: true // Les animations ne se jouent qu'une fois
+        });
+    </script>
+</body>
+
+</html>
